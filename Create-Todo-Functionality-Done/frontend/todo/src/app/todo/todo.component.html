@@ -1,0 +1,76 @@
+
+
+<div class="container">
+
+  <H2>Create Scenario</H2>
+
+  <div class="form-row">
+    
+  <fieldset class="form-group">
+    <label>Asset Class</label>
+    <input type="text" [(ngModel)]="todo.assetClass" class="form-control" name="Asset Class" required="required">
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <label>Risk Factor</label>
+    <input type="text" [(ngModel)]="todo.riskFactor" class="form-control" name="Risk Factor" required="required">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>Status New</label>
+    <input type="text" [(ngModel)]="todo.statusNew" class="form-control" name="Status New" required="required">
+  </fieldset>
+
+</div>
+   
+  <div class="form-row">
+
+  <fieldset class="form-group">
+    <label>Scenario</label>
+    <input type="text" [(ngModel)]="todo.scenario" class="form-control" name="Scenario" required="required">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>Scenario Name</label>
+    <input type="text" [(ngModel)]="todo.scenarioName" class="form-control" name="Scenario Name" required="required">
+  </fieldset>
+  
+   
+  <fieldset class="form-group">
+    <label>Segment</label>
+    <input type="text" [(ngModel)]="todo.segment" class="form-control" name="Segment" required="required">
+  </fieldset>
+  
+ </div>
+ <div class="form-row">
+  <fieldset class="form-group">
+    <label>Scenario Severity</label>
+    <input type="text" [(ngModel)]="todo.scenarioSeverity" class="form-control" name="Sensitivity" required="required">
+  </fieldset>
+
+  <fieldset class="form-group">
+      <label>Scenario Date</label>
+      <input type="date" 
+      [ngModel]="todo.targetDate | date:'yyyy-MM-dd' "
+      (ngModelChange)="todo.scenarioDate = $event"
+      class="form-control" name="scenarioDate" required="required">
+  </fieldset>
+  
+
+  
+  <fieldset class="form-group">
+    <label>Threshold to be set</label>
+    <input type="text" [(ngModel)]="todo.threshold" class="form-control" name="Threshold" required="required">
+  </fieldset>
+</div>
+
+<div class="form-row">
+  <fieldset class="form-group">
+    <label>Commentary why and what was the cause</label>
+    <input type="text area" [(ngModel)]="todo.description" class="form-control" name="Description" required="required">
+  </fieldset>
+  </div>
+  
+  <button class="btn btn-success" (click)="saveTodo()">Create</button>
+
+</div>

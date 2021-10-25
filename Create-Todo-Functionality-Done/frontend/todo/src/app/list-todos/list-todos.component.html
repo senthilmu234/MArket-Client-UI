@@ -1,0 +1,51 @@
+<h2> Scenario Detail </h2>
+
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Submitted by</th>
+        <th>Asset Class</th>
+        <th>Risk Factor</th>
+        <th>Status New</th>
+        <th>Scenario</th>
+        <th>ScenarioName</th>
+        <th>Segment</th>
+        <th>Scenario Severity</th>
+        <th>Scenario Date</th>
+        <th>Threshold</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--   for (Todo todo: todos) {  -->
+              <tr *ngFor="let todo of todos">
+                <td>{{todo.username}}</td>
+                <td>{{todo.assetClass}}</td>
+                <td>{{todo.riskFactor}}</td>
+                <td>{{todo.statusNew}}</td>
+                <td>{{todo.scenario}}</td>
+                <td>{{todo.scenarioName}}</td>
+                <td>{{todo.segment}}</td>
+                <td>{{todo.scenarioSeverity}}</td>
+                <td>{{todo.scenarioDate | date | uppercase}}</td>
+                <td>{{todo.threshold}}</td>
+                <td>{{todo.description}}</td>
+                <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Approve</button></td>
+                <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Reject</button></td>
+                
+              </tr>
+             
+      <!-- } -->
+    </tbody>
+    </table>
+    
+  <div class="row-2">
+      <button (click)="addAll()" class="btn btn-success">Approve All</button>
+      <!--<button (click)="goHome()" class="btn btn-success">Home</button>-->
+          
+  </div>
+  
+
+</div>

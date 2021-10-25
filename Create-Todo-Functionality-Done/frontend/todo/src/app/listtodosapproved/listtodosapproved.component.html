@@ -1,0 +1,49 @@
+
+<h2> Approved Scenario Detail </h2>
+
+<div class="alert alert-success">A new Scenario has been approved and created in System</div>
+
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Submitted by</th>
+        <th>Asset Class</th>
+        <th>Risk Factor</th>
+        <th>Status New</th>
+        <th>Scenario</th>
+        <th>ScenarioName</th>
+        <th>Segment</th>
+        <th>Scenario Severity</th>
+        <th>Scenario Date</th>
+        <th>Threshold</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--   for (Todo todo: todos) {  -->
+              <tr *ngFor="let todo of todos">
+                <td>guest</td>
+                <td>{{todo.assetClass}}</td>
+                <td>{{todo.riskFactor}}</td>
+                <td>{{todo.statusNew}}</td>
+                <td>{{todo.scenario}}</td>
+                <td>{{todo.scenarioName}}</td>
+                <td>{{todo.segment}}</td>
+                <td>{{todo.scenarioSeverity}}</td>
+                <td>{{todo.scenarioDate | date | uppercase}}</td>
+                <td>{{todo.threshold}}</td>
+                <td>{{todo.description}}</td>
+               
+              </tr>
+             
+      <!-- } -->
+    </tbody>
+    </table>
+    
+  <div class="row">
+      <button (click)="addTodo()" class="btn btn-success">Home: Create Scenario</button>
+  </div>
+
+</div>
